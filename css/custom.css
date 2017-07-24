@@ -1,0 +1,84 @@
+.navbar-brand img {
+    height: 100%;
+    float: left;
+}
+
+.navbar-brand {
+    padding: 5px;
+    color: #708090!important;
+    font-size: medium;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    height: 64px;
+    line-height: 23px;
+}
+
+.navbar {
+    padding: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    background-color: none !important;
+    color: #ff5733;
+}
+
+.navbar-toggle {
+    background-color: #ff5733;
+    padding: 13px 13px;
+    color: #fff;
+    transition: all .25s ease-in-out;
+}
+
+.navbar-toggle .icon-bar {
+    background: #fff !important;
+}
+
+.navbar-toggle:hover {
+    box-shadow: 0px 0px 5px 2px rgba(249, 228, 223, 0.9);
+}
+
+.icon-bar {
+    background: #fff;
+    width: 85%;
+    height: 4px;
+}
+
+.more-less {
+    float: right;
+    color: #ff5733;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    padding: 60px 0px 60px 0px;
+    color: #ff5733;
+    background: #fff;
+    font-family: sans-serif, monospace;
+}
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    float: right;
+    margin: 2px 7px;
+}
+
+</style>

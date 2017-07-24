@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="Jquery/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        .slider-container {
+            width: 100%;
+            min-height: 500px;
+            background-image: url('images/sliderimg_2.jpg');
+            padding-top: 60px;
+        }
+        
+        .image-text-container {
+            width: 100%;
+            padding: 50px 0px;
+            background: #f5f5f5;
+        }
+        
+        .content {
+            min-height: 400px;
+            background: #fff;
+            padding: 0px;
+        }
+        
+        .image-content img {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .image-content {
+            padding: 0px;
+        }
+        
+        .text-content {
+            padding-left: 20px;
+        }
+        
+        .text-content h3 {
+            font-size: 30px;
+            letter-spacing: 1px;
+            color: #1c1c1c;
+            font-family: arieal, sans-serif
+        }
+        
+        .under-line {
+            border: 2px solid #ff5733;
+            width: 150px;
+            text-align: left;
+            margin-left: 0px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .text-content p {
+            font-size: 16px;
+            font-family: arieal, sans-serif;
+            font-weight: 500;
+            padding: 10px 0px 10px 0px;
+            line-height: 25px;
+        }
+        
+        .adrs-info-container {
+            padding: 75px 25px;
+            background-image: url("images/block-3_bg.jpg");
+            width: 100%;
+        }
+        
+        .content-container {
+            width: 100%;
+        }
+        
+        .adrs-info {
+            margin: auto;
+            background: #f5f5f5;
+            padding: 0px;
+        }
+        
+        .adrs-heading {
+            background: whitesmoke;
+            padding: 10px 0px 10px 15px;
+        }
+        
+        .adrs-heading p:nth-child(1) {
+            margin: 0px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ff5733;
+            font-family: sans-serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .adrs-body {
+            padding: 10px 15px 10px 15px;
+        }
+        
+        .adrs-body p {
+            margin: 0px 0px 10px 5px;
+            font-size: 16px;
+            font-weight: 500;
+            font-family: sans-serif;
+            line-height: 30px;
+        }
+        
+        .form-content {
+            width: 100%;
+            margin: auto;
+            padding: 15px 5px 10px 15px;
+            background-color: rgba(252, 254, 251, 0.57);
+            border-radius: 3px;
+            margin-right: 0px;
+            border-top: 5px solid #ff5733;
+        }
+        
+        .form-heading {
+            margin: 0px;
+            text-align: center;
+            padding-top: 10px;
+            color: #27130c;
+        }
+        
+        .form select,
+        .form input {
+            width: 100%;
+            padding: 12px 12px;
+            font-family: sans-serif;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 2px solid;
+            border-color: #7d7268;
+            outline: none;
+            background-color: rgba(241, 236, 229, 0.49);
+            transition: all .20s ease-in;
+            margin-bottom: 10px;
+        }
+        
+        .form select:focus,
+        .form input:focus {
+            border: 2px solid #ff5733;
+            background: #fff;
+            box-shadow: 0px 0px 8px 0px rgba(255, 87, 51, 0.8);
+        }
+        
+        .dummy {
+            padding: 20px 0px 20px 0px;
+        }
+        
+        .form-container {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            border-radius: 2px;
+            background-color: #ff5733;
+            border: 1px solid #ff5733;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            font-family: sans-serif;
+            font-size: 16px;
+            transition: all .25s ease-in-out;
+        }
+        
+        .submit-btn:hover {
+            background-color: #bf2908;
+            box-shadow: 0px 0px 5px 1px rgba(232, 36, 36, 0.5);
+        }
+        
+        footer {
+            padding-bottom: 5px;
+            padding-top: 5px;
+            background: #ff5733;
+        }
+        
+        footer p {
+            font-family: sans-serif;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: #fff;
+            margin: 18px 0px 0px 0px;
+        }
+        
+        .copy-rights {
+            padding-right: 0px;
+        }
+        
+        .ft-container {
+            margin: 0px;
+            width: 100%;
+        }
+        
+        .social-icon:hover {
+            background: #fff;
+            color: #ff5733;
+            box-shadow: 0px 0px 6px 6px rgba(255, 87, 51, 0.5);
+        }
+        
+        .social-icon {
+            transition: all .25s ease-in-out;
+        }
+        
+        .icon-container {
+            display: table;
+            margin: auto;
+        }
+        
+        .slider-container h1 {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 30%;
+            color: whitesmoke;
+            text-shadow: 1px 1px 4px #fff, 1px 5px 35px #ff5733;
+        }
+        
+        .slide {
+            margin-top: 40%;
+        }
+        
+        .carousel-inner {
+            background-color: rgba(252, 254, 251, 0.57);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Navbar-->
+
+        <nav class="navbar navbar-custom navbar-fixed-top navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo">The Mortgage<br>&nbsp;Center</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="#">+91-8099997103</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="slider-container">
+            <h1>Mortgages Made Easy</h1>
+            <div class="small-carousel">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-md-4 col-sm-3 col-xs-3">
+                                    <a href="#"><img src="images/national-bank.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-3 col-xs-3">
+                                    <a href="#"><img src="images/TD_Bank.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-3 col-xs-3">
+                                    <a href="#"><img src="images/merix.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+                          
+
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="image-text-container">
+            <div class="container content">
+                <div class="col-md-4 image-content">
+                    <img src="images/building.png" alt="image" />
+                </div>
+                <div class="col-md-7 text-content">
+                    <h3>Type Any Heading Here - First Text heading</h3>
+                    <hr class="under-line">
+                    <p>Might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address.</p>
+                    <p>Might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address. Might be temporarily down or it may have moved permanently to a new web address.</p>
+                    <p>Might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address!</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="adrs-info-container">
+            <div class="content-container container">
+                <div class="adrs-info col-md-5">
+                    <div class="adrs-heading">
+                        <p>Details of our project</p>
+                    </div>
+                    <div class="adrs-body">
+                        <p>Might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address.</p><br>
+                        <p>Might be temporarily down or it may have moved permanently to a new web address. might be temporarily down or it may have moved permanently to a new web address.</p><br>
+                        <div class="adrs">
+                            <p>Village: Venkatadripalli <br> Mandal: Beluguppa<br> District: Anantapur<br> State: Andhra Pradesh<br> Pincode: 515 741<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1 dummy"></div>
+                <div class="form-container col-md-6">
+                    <div class="form-content">
+                        <div class="form-heading">
+                            <h4>Lets get start connecting with world please Fill below application form</h4>
+                        </div>
+                        <hr>
+                        <div class="form">
+                            <form action="#">
+                                <input type="text" id="name" placeholder="Name" required>
+                                <input type="text" id="mb-number" placeholder="Mobile Number" max="15" required>
+                                <input type="text" id="email" placeholder="Email" pattern="@" required>
+                                <select name="select" id="select">
+                                    <option value="Select" disabled selected>Select</option>
+                                    <option value="One">One</option>
+                                    <option value="Tow">Two</option>
+                                    <option value="Three">Three</option>
+                                    <option value="Four">Four</option>
+                                    <option value="Five">Fives</option>
+                                </select>
+                                <button class="submit-btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container ft-container">
+
+            <div class="copy-rights col-sm-8">
+                <p>2017 - Portfolio website. All rights reserved.</p>
+            </div>
+            <div class="icon-container col-sm-4">
+                <a href="#">
+                    <div class="social-icon">
+
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social-icon">
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="social-icon">
+                    </div>
+                </a>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!--main-container-->
+    <script>
+        $('.carousel[data-type="multi"] .item').each(function() {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 1; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+        var bgvalue = 1;
+        setInterval(function() {
+            bgvalue++;
+            if (bgvalue > 2) {
+                bgvalue = 1;
+            }
+            console.log(bgvalue);
+            document.getElementsByClassName("slider-container")[0].style.background = "url('images/sliderimg_" + bgvalue + ".jpg')";
+            $(".slider-container").css("opacity","1");
+
+        }, 2000);
+
+    </script>
+
+</body>
+
+</html>
