@@ -32,7 +32,7 @@
         
         .image-content img {
             width: 100%;
-            height: 400px;
+            min-height: 400px;
         }
         
         .image-content {
@@ -41,6 +41,16 @@
         
         .text-content {
             padding-left: 20px;
+        }
+        
+        .carousel-inner {
+            background-color: rgba(252, 254, 251, 0.57);
+            height: 150px;
+            border-radius: 5px;
+        }
+        
+        .item img {
+            line-height: 150px;
         }
         
         .text-content h3 {
@@ -230,11 +240,29 @@
         }
         
         .slide {
-            margin-top: 40%;
+            margin-top: 200px;
         }
         
-        .carousel-inner {
-            background-color: rgba(252, 254, 251, 0.57);
+        .go-upBtn {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: #ff5733;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            transition: all .20s ease-in;
+            box-shadow: 2px 2px 20px 1px rgba(255, 87, 51, 0.85);
+            border: none;
+            outline: none;
+            color: #fff;
+            display: none;
+        }
+        
+        .go-upBtn:hover {
+            background: #fff;
+            color: #ff5733;
+            box-shadow: 2px 2px 20px 1px rgba(255, 255, 255, 0.42);
         }
 
     </style>
@@ -267,24 +295,65 @@
             <h1>Mortgages Made Easy</h1>
             <div class="small-carousel">
                 <div class="col-sm-offset-3 col-sm-6">
-                    <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
-                        <div class="carousel-inner">
+                    <div class="carousel slide" data-ride="carousel" data-interval="3000" id="myCarousel">
+                        <div class="carousel-inner imgwrapper">
                             <div class="item active">
-                                <div class="col-md-4 col-sm-3 col-xs-3">
-                                    <a href="#"><img src="images/national-bank.png" class="img-responsive"></a>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg1.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg2.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6 hidden-xs">
+                                    <a href="#"><img src="images/cimg3.png" class="img-responsive"></a>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg4.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg5.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6 hidden-xs">
+                                    <a href="#"><img src="images/cimg1.png" class="img-responsive"></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4 col-sm-3 col-xs-3">
-                                    <a href="#"><img src="images/TD_Bank.png" class="img-responsive"></a>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg2.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg3.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-3 col-xs-3 hidden-xs">
+                                    <a href="#"><img src="images/cimg4.png" class="img-responsive"></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="col-md-4 col-sm-3 col-xs-3">
-                                    <a href="#"><img src="images/merix.png" class="img-responsive"></a>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg5.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg1.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-3 col-xs-3 hidden-xs">
+                                    <a href="#"><img src="images/cimg2.png" class="img-responsive"></a>
                                 </div>
                             </div>
-                          
+                            <div class="item">
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg3.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <a href="#"><img src="images/cimg4.png" class="img-responsive"></a>
+                                </div>
+                                <div class="col-md-4 col-sm-3 col-xs-3 hidden-xs">
+                                    <a href="#"><img src="images/cimg5.png" class="img-responsive"></a>
+                                </div>
+                            </div>
+
 
                         </div>
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
@@ -373,38 +442,40 @@
             </div>
 
         </footer>
-
+        <button class="go-upBtn"> go up</button>
     </div>
 
     <!--main-container-->
     <script>
-        $('.carousel[data-type="multi"] .item').each(function() {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            for (var i = 0; i < 1; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
+        $(document).ready(function() {
+            $(".go-upBtn").click(goUp);
+            var dHeight = $(document).height() / 4;
+            $(document).scroll(function() {
+                if (scrollY > dHeight) {
+                    $(".go-upBtn").show();
+                } else {
+                    $(".go-upBtn").hide();
                 }
+            })
+        })
 
-                next.children(':first-child').clone().appendTo($(this));
-            }
-        });
         var bgvalue = 1;
         setInterval(function() {
             bgvalue++;
             if (bgvalue > 2) {
                 bgvalue = 1;
             }
-            console.log(bgvalue);
+            //console.log(bgvalue);
             document.getElementsByClassName("slider-container")[0].style.background = "url('images/sliderimg_" + bgvalue + ".jpg')";
-            $(".slider-container").css("opacity","1");
+            $(".slider-container").css("opacity", "1");
 
-        }, 2000);
+        }, 1000);
+
+        function goUp() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 500);
+        }
 
     </script>
 
